@@ -58,11 +58,11 @@ func main() {
 
 	// ecriture des nouvelles données
 
-	var liste variables.Xlif
+	liste := list
 
 	liste.File.Body = newtranscript
 
-	file, _ := xml.MarshalIndent(list, "	", "	")
+	file, _ := xml.MarshalIndent(liste, "	", "	")
 
 	_ = ioutil.WriteFile("./sorties/"+source, file, 0644)
 
